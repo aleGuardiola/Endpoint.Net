@@ -2,10 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>EndpointNet.Guardiola</PackageId>
+    <Authors>Alejandro Guardiola</Authors>
+    <Company />
+    <Product />
+    <Description>Representation of an endpoint to retrive data. GET and POST are supported.</Description>
+    <PackageProjectUrl>https://github.com/aleGuardiola/Endpoint.Net</PackageProjectUrl>
+    <PackageTags>endpoint</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
-
+  
 </Project>
