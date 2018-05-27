@@ -6,3 +6,11 @@ C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\net
 C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\netstandard2.0\Enpoint.Net.AssemblyInfo.cs
 C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\netstandard2.0\Enpoint.Net.dll
 C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\netstandard2.0\Enpoint.Net.pdb
+D:\Projects\Personal\Endpoint.Net\Endpoint.Net\bin\Debug\netstandard2.0\Enpoint.Net.deps.json
+D:\Projects\Personal\Endpoint.Net\Endpoint.Net\bin\Debug\netstandard2.0\Enpoint.Net.dll
+D:\Projects\Personal\Endpoint.Net\Endpoint.Net\bin\Debug\netstandard2.0\Enpoint.Net.pdb
+D:\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\netstandard2.0\Enpoint.Net.csproj.CoreCompileInputs.cache
+D:\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\netstandard2.0\Enpoint.Net.AssemblyInfoInputs.cache
+D:\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\netstandard2.0\Enpoint.Net.AssemblyInfo.cs
+D:\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\netstandard2.0\Enpoint.Net.dll
+D:\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Debug\netstandard2.0\Enpoint.Net.pdb

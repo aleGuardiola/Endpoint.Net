@@ -16,6 +16,7 @@ namespace RestApiHelper
         protected int timeout;
         protected string endpointUrl;
         protected string userAgent;
+        protected string bearelToken = null;
 
         public Endpoint(
             RequestType requestType, 
@@ -31,10 +32,15 @@ namespace RestApiHelper
             this.timeout = timeout;
         }
 
+        public void SetBearerToken(string token)
+        {
+            bearelToken = token;
+        }
+
         //Send the request and return the result a single object result
         public async Task<T>GetSingleData( P parameters )
         {
-            var request = new HttpRequest(endpointUrl, userAgent, timeout, httpClient);
+            var request = new HttpRequest(endpointUrl, userAgent, timeout, httpClient, bearelToken);
             var result = await request.SendRequestAsync<T>(requestType, parameters);
             return result;
         }
@@ -42,7 +48,7 @@ namespace RestApiHelper
         //Send the request and return the result multiple objects result
         public async Task<T[]>GetMultipleData( P parameters )
         {
-            var request = new HttpRequest(endpointUrl, userAgent, timeout, httpClient);
+            var request = new HttpRequest(endpointUrl, userAgent, timeout, httpClient, bearelToken);
             var result = await request.SendRequestAsync<T[]>(requestType, parameters);
             return result;
         }

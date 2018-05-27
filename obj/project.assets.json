@@ -47,7 +47,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "NETStandard.Library/2.0.0": {
+      "NETStandard.Library/2.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -742,10 +742,10 @@
         "runtime.json"
       ]
     },
-    "NETStandard.Library/2.0.0": {
-      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+    "NETStandard.Library/2.0.1": {
+      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "type": "package",
-      "path": "netstandard.library/2.0.0",
+      "path": "netstandard.library/2.0.1",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -866,12 +866,12 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.0.nupkg.sha512",
+        "netstandard.library.2.0.1.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
+      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
@@ -3078,7 +3078,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.0",
+      "NETStandard.Library >= 2.0.1",
       "Newtonsoft.Json >= 10.0.3"
     ]
   },
@@ -3088,15 +3088,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\thesk\\Desktop\\Projects\\Personal\\Endpoint.Net\\Endpoint.Net\\Enpoint.Net.csproj",
-      "projectName": "Enpoint.Net",
-      "projectPath": "C:\\Users\\thesk\\Desktop\\Projects\\Personal\\Endpoint.Net\\Endpoint.Net\\Enpoint.Net.csproj",
+      "projectUniqueName": "D:\\Projects\\Personal\\Endpoint.Net\\Endpoint.Net\\Enpoint.Net.csproj",
+      "projectName": "EndpointNet.Guardiola",
+      "projectPath": "D:\\Projects\\Personal\\Endpoint.Net\\Endpoint.Net\\Enpoint.Net.csproj",
       "packagesPath": "C:\\Users\\thesk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thesk\\Desktop\\Projects\\Personal\\Endpoint.Net\\Endpoint.Net\\obj\\",
+      "outputPath": "D:\\Projects\\Personal\\Endpoint.Net\\Endpoint.Net\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3110,7 +3107,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\thesk\\Downloads\\remote-wiring-develop\\remote-wiring-develop\\Microsoft.Maker.win10\\NuPkg": {},
+        "http://nuget.uxdivers.com/grial": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3130,12 +3127,12 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.1, )",
             "autoReferenced": true
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "10.0.3"
+            "version": "[10.0.3, )"
           }
         },
         "imports": [

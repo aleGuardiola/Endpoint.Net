@@ -6,3 +6,4 @@ C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Release\n
 C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Release\netstandard2.0\Enpoint.Net.AssemblyInfo.cs
 C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Release\netstandard2.0\Enpoint.Net.dll
 C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Release\netstandard2.0\Enpoint.Net.pdb
+C:\Users\thesk\Desktop\Projects\Personal\Endpoint.Net\Endpoint.Net\obj\Release\netstandard2.0\Enpoint.Net.csprojResolveAssemblyReference.cache

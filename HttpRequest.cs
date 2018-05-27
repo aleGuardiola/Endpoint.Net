@@ -22,56 +22,79 @@ namespace RestApiHelper
         // http request fields
         string path;
 		string userAgent;
-		//CookieCollection cookies;
-		private int timeout;
+        string bearerToken;
+        //CookieCollection cookies;
+        private int timeout;
         private HttpClient _client;
 
+
+
 		// contructor for an http request using Uri as string
-		public HttpRequest(string path, string userAgent, int timeout, HttpClient client)
+		public HttpRequest(string path, string userAgent, int timeout, HttpClient client, string bearerToken = null)
 		{
 			// set Uri and agent
 			this.path = path;
 			this.userAgent = userAgent;
 			this.timeout = timeout;
-            
+            this.bearerToken = bearerToken;
+
             _client = client;
 		}
         		
 		// prepare for response 
-		string PrepareRequest( RequestType type, object param = null)
+		async Task<string> PrepareRequest( RequestType type, object param = null)
 		{
             string result = "Error";
 
-			// prepare request based on type
+            HttpRequestMessage request = new HttpRequestMessage();
+            string finalPath = null;
+
+            if (bearerToken != null)
+                request.Headers.Add("Authorization", "Bearer " + bearerToken);
+
+            // prepare request based on type
             if (type == RequestType.GET)
 			{
                 var getP = param == null ? "" : objectToGET(param);
 
-                var task = _client.GetStringAsync(path + getP);
-				task.Wait();
+                request.Method = HttpMethod.Get;                
+                finalPath = path + getP;
 
-                result = task.Result;
+                //var task = _client.GetStringAsync(path + getP);
+				//task.Wait();
+
+                //result = task.Result;
 
 			}
 			else if (type == RequestType.POST)
 			{
 				var strData = JsonConvert.SerializeObject(param);
-				
-				var task = _client.PostAsync(path, new StringContent(strData, Encoding.UTF8, "application/json" ));
-				task.Wait();
-                task.Result.EnsureSuccessStatusCode();
-				var task1 = task.Result.Content.ReadAsStringAsync();
-                task1.Wait();
-                result = task1.Result;				
+
+                request.Method = HttpMethod.Post;                
+                request.Content = new StringContent(strData, Encoding.UTF8, "application/json");
+
+                finalPath = path;
+
+				//var task = _client.PostAsync(path, new StringContent(strData, Encoding.UTF8, "application/json" ));
+				//task.Wait();
+    //            task.Result.EnsureSuccessStatusCode();
+				//var task1 = task.Result.Content.ReadAsStringAsync();
+    //            task1.Wait();
+    //            result = task1.Result;				
 			}
-            			
+
+            request.RequestUri = new Uri(finalPath);
+
+            var response = await _client.SendAsync(request);
+            result = await response.Content.ReadAsStringAsync();
+
 			return result;
 		}
         		
 		// will perform request
-		public T SendRequest<T>( RequestType requestType, object Object = null) where T : class
+		public T SendRequest<T>( RequestType requestType, object Object = null  ) where T : class
 		{
-            var response = PrepareRequest(requestType, Object);
+            var response = PrepareRequest(requestType, Object).GetAwaiter().GetResult();
 
 			// if reponse was successful then get response contents
 			if (response != "Error")
